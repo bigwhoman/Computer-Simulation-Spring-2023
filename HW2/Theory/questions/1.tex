@@ -1,0 +1,20 @@
+\smalltitle{سوال 1}
+    \begin{latin}
+        \noindent
+        $P(X) = \frac{e^{-\alpha}\alpha^{x}}{x!} \xrightarrow[]{\alpha = \lambda * T}\frac{e^{-\lambda * T}(\lambda * T)^{x}}{x!}$ \\
+        \\$T = t_a + t_b, t_a \rightarrow Gamma(\beta,\theta) \rightarrow P(X,T)=\frac{e^{-\lambda * T}(\lambda * T)^{x}}{x!}$\\ \\
+        $P(X,t_a+t_b) = P_X(X,t_a)*P_T(t_a) + P_X(X,T-t_a)*P_T(T-t_a)$ \\\\
+        $P_T(t_a) = \frac{\beta*\theta*(\beta*\theta*t_a)^{\beta-1}e^{-\beta \theta t_a}}{\Gamma(\beta)}$\\
+        \\$P(X,t_a+t_b) = \frac{e^{-\lambda_1 * t_a}(\lambda_1 * t_a)^{x}}{x!}\times\frac{\beta*\theta*(\beta*\theta*t_a)^{\beta-1}e^{-\beta \theta t_a}}{\Gamma(\beta)} + 
+        \frac{e^{-\lambda_2 * (T-t_a)}(\lambda_2 * (T-t_a))^{x}}{x!}\times\frac{\beta*\theta*(\beta*\theta*(T-t_a))^{\beta-1}e^{-\beta \theta (T-t_a)}}{\Gamma(\beta)}$\\\\
+        $\xrightarrow[\theta=5,\Gamma(\beta) = 2]{\beta=2,\lambda_1=3,\lambda_2=2}
+         P(X,t_a)=\frac{(50t_ae^{-10t_a})*e^{-3*t_a}*(3*t_a)^x+(50(10-t_a)e^{-10(10-t_a)})*e^{-2*(10-t_a)}*(2*(10-t_a))^x}{x!}$\\
+         \\ $\xrightarrow[]{\text{marginalize $t_a$}} P(X) = \int_{0}^{10}(\frac{(50t_ae^{-10t_a})*e^{-3*t_a}*(3*t_a)^x+(50(10-t_a)e^{-10(10-t_a)})*e^{-2*(10-t_a)}*(2*(10-t_a))^x}{x!})dt_a$
+         \\\\ 
+         Aproximate answer = 0.0005
+    \end{latin}
+
+
+
+
+
