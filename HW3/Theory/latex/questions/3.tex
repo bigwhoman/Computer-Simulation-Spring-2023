@@ -1,22 +1,31 @@
 \smalltitle{سوال 3}
 \\
 برای هر سیستم جداگانه بررسی می‌کنیم. \\
-
+\begin{latin}
+  \noindent
+  $P_0 = ((\sum_{n=0}^{c-1}\frac{(\frac{\lambda}{\mu})^n}{n!})+((\frac{\lambda}{\mu})^c\frac{1}{c!}\frac{c\mu}{c\mu-\lambda}))^{-1}$ \\
+  \\
+  $L = c\rho + \frac{(c\rho)^{c+1}P_0}{c(c!)(1-\rho)^2}$
+  \\\\
+  $W = \frac{L}{\lambda}$
+  \\ \\
+\end{latin}
 \begin{enumerate}
   \item سیسستم اول
   \begin{latin}
-    $w_Q=\frac{\rho}{c\mu(1-\rho)} \xrightarrow[]{\rho = \frac{12}{3\times5}}=\frac{4}{15}$ 
-    \\
-    annual cost = $\frac{4}{15}\times 0.001 \times 365 \times 24 \times 3600 = 25228\$$
+    $P_0 = 0.056 \rightarrow L = 4.98\rightarrow W = 0.41$ \\
+    annual cost = $0.41 \times 12 \times \times 0.001 \times 365 \times 24 \times 3600 = 157325\$$
   \end{latin}
   \item سیستم با بهبود سرور 
   \begin{latin}
-    annual cost = $\frac{12}{3\times6}\times 0.001 \times 365 \times 24 \times 3600 + 50000= 71024\$$
+    $P_0 = 0.111 \rightarrow L = 2.88\rightarrow W = 0.240$\\
+    annual cost = $0.240 \times 12 \times 0.001 \times 365 \times 24 \times 3600 + 50000= 141104\$$
   \end{latin}
   \item سیستم با اضافه کردن سرور جدید
   \begin{latin}
-    annual cost = $\frac{12}{4\times5}\times 0.001 \times 365 \times 24 \times 3600 + 70000=88921\$$
+    $P_0 = 0.083 \rightarrow L = 2.83 \rightarrow W = 0.235$\\
+    annual cost = $0.235 \times 12 \times 0.001 \times 365 \times 24 \times 3600 + 70000=159264\$$
   \end{latin}
 \end{enumerate}
-متوجه می‌شویم که این تغییرات برای یک سال نتیجه چندان خوبی به همراه ندارند پس بهتر است با همان سیستم قبلی جلو برویم.
+متوجه می‌شویم در بهترین حالت برای بهینه کردن هزینه‌ها باید سرورها را ارتقاع ببخشیم.
 \\

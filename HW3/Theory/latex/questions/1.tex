@@ -1,56 +1,38 @@
-\begin{latin}
-  Shoutout to Hirbod Behnam for helping me out on the questions.
-\end{latin}
+
 \smalltitle{سوال 1}
 
 \begin{enumerate}
-    \item \phantom{text}
-    \\
-    \begin{latin}
-      $P[p_1 | p_2,-p_3] = \frac{\sum_{p_4} P[p_1,p_2,-p_3,p_4]}{P[p_2,-p_3]} = Z * \sum_{p_4} P[p_1]P[p_2|p_1]P[-p_3|p_2]P[p_4|p_2]$
-      \\\\
-      $=Z* P[p_1]P[p_2|p_1]P[-p_3|p_2]P[+p_4|p_2] + Z*P[p_1]P[p_2|p_1]P[-p_3|p_2]P[-p_4|p_2]$ 
-      \\\\
-      $= Z*0.4 * 0.8 * (1 - 0.2) * 0.8 + Z*0.4 * 0.8 * (1-0.2) * 0.2 = Z * 0.256$
-      \\\\
-      $ Z = \frac{1}{\sum_{p_1,p_4}P[p_1,p_2,-p_3,p_4]} \rightarrow \\ \sum_{p_1,p_4}P[p_1,p_2,-p_3,p_4] = P[+p_1]P[p_2|+p_1]P[-p_3|p_2]P[+p_4|p_2] + P[+p_1]P[p_2|+p_1]P[-p_3|p_2]P[-p_4|p_2]+P[-p_1]P[p_2|-p_1]P[-p_3|p_2]P[+p_4|p_2]+P[-p_1]P[p_2|-p_1]P[-p_3|p_2]P[-p_4|p_2]$
-      \\\\
-      $= 0.4 * 0.8 * 0.8 * 0.8 + 0.4 * 0.8 * 0.8 * 0.2 + 0.6 * 0.5 * 0.8 * 0.8 + 0.6 * 0.5 * 0.8 * 0.2 = P[p_2,-p_3]=0.496$
-      \\\\
-      $\xrightarrow[]{} P[p_1|p_2,-p_3] = \frac{0.256}{0.496} \simeq 0.52$
-      \\\\
-      $P[p_2|-p_3] = \frac{P[p_2,-p_3]}{P[-p_3]} = \frac{0.496}{P[-p_3]} \rightarrow P[-p_3] =
-       \sum_{p_1,p_2,p_4}P[p_1,p_2,-p_3,p_4]=P[+p_1]P[+p_2|+p_1]P[-p_3|+p_2] + P[+p_1]P[-p_2|+p_1]P[-p_3|-p_2] + P[-p_1]P[+p_2|-p_1]P[-p_3|+p_2] 
-       + P[-p_1]P[-p_2|-p_1]P[-p_3|-p_2] = 0.4 * 0.8 * 0.8 + 0.4 * 0.2 * 0.7 + 0.6 * 0.5 * 0.8 + 0.6 * 0.5 * 0.7 = P[-p_3] =  0.762$
-       \\\\
-       $\rightarrow P[-p_3] = 0.762$
-       \\\\
-       $\rightarrow P[p_2|-p_3] = \frac{0.496}{0.762} = 0.65$
-    
-    
-    \end{latin}
-    \item \phantom{text}
-    \\
-    \begin{latin}
-      $P[-p_3] = \sum_{p_1,p_2}P[p_1,p_2,-p_3] = \sum_{p_1,p_2}P[p_1]P[p_2|p_1]p[-p_3|p_2] = 
-      \\\\ \sum_{p_2} P[-p_3|p_2] *\sum_{p_1}P[p_1]P[p_2|p_1] $
-      \\\\
-      $\sum_{p_1}P[p_1]P[p_2|p_1] = P[p_2] \rightarrow$
-      \\\\ 
-      $P[+p_1,+p_2] = 0.32 , P[+p_1,-p_2] = 0.08,P[-p_1,+p_2] = 0.30,P[-p_1,-p_2]=0.30$
-      \\\\
-      $\xrightarrow[]{\text{factor out $p_1$}} +p_2 = 0.62,-p_2=0.38$
-      \\\\
-      $\sum_{p_2} P[-p_3|p_2]P[p_2]$
-      \\\\
-      $P[+p_3,+p_2] = 0.124,P[-p_3,+p_2]=0.496,P[+p_3,-p_2]=0.114,P[-p_3,-p_2]=0.266$
-      \\\\
-      $\xrightarrow[]{\text{factor out $p_2$}} P[-p_3] = 0.762,P[+p_3]=0.238$
-      \\\\\\
-      $\rightarrow P[p_2|-p_3] = \frac{P[p_2,-p_3]}{P[-p_3]} = \frac{0.496}{0.762} = 0.65$
-    \end{latin}
-    
-  \end{enumerate}
+  \item \phantom{text}
+        \\
+        باید حساب کنیم که چقدر احتمال دارد از m تسک تا بی‌نهایت تسک در سرور باشند.
+        \begin{latin}
+          $\rho= \frac{\lambda}{\mu},P_n=(1-\rho)\rho^n \rightarrow P_{wait} = \sum_{i=m+1}^{\infty}(1-\rho)\rho^i$
+        \end{latin}
+  \item \phantom{text}
+        \\
+        یعنی احتمال اینکه هنگام وجود بیش از یک تسک در سیستم باشد.
+        \begin{latin}
+          $\sum_{\infty}^{i=1}P_i = 1 - P_0 = 1 - (1-\rho) = \rho = \frac{\lambda}{\mu}$
+        \end{latin}
+  \item \phantom{text}
+        \\
+        \begin{latin}
+          $w = \frac{1}{\mu-\lambda}$
+        \end{latin}
+  \item \phantom{text}
+        \\
+        \begin{latin}
+          $P_{entry} = \sum_{i=0}^{n}(1-\rho)\rho^i = \gamma \rightarrow (1-\rho)*\frac{1-\rho^n}{1-\rho}=\gamma \\
+            \rightarrow n = \log_{\rho}(1-\gamma)$
+        \end{latin}
+  \item \phantom{text}
+        \\
+        \begin{latin}
+          $L = \frac{\rho}{1-\rho} \xrightarrow[]{\rho = \frac{50}{60}}L = \frac{\frac{5}{6}}{\frac{1}{6}}= 5$\\
+          $W = \frac{1}{\mu-\lambda} = \frac{1}{60-50}=\frac{1}{10}$ \\
+          $\rho = \frac{50}{60}$
+        \end{latin}
+\end{enumerate}
 
 
 

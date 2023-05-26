@@ -6,6 +6,15 @@
         \end{latin}
   \item \phantom{text}
         \begin{latin}
-          prob = $P(wait) = \rho * (1 - \rho) = \frac{5}{36}$
+          $P_0 = ([1 + \frac{10}{6}] + [(\frac{10}{6})^2*\frac{1}{2}*\frac{2 * 6}{12 - 10}])^{-1} = 0.09$
+          \\\\
+          $P_{wait} = \frac{(c*\rho)^c*\rho}{c!*(1-\rho)}*P_0 = \frac{(2*\frac{5}{6})^2*\frac{5}{6}}{2*\frac{1}{6}}*0.09 = 0.625$
         \end{latin}
+  \item \phantom{text}
+  \\
+  \begin{latin}
+    $L = c\rho + \frac{(c\rho)^{c+1}P_0}{c(c!)(1-\rho)^2} \xrightarrow[]{\rho = \frac{\lambda}{c\mu}=\frac{5}{6}}=\frac{5}{3} + \frac{(\frac{5}{3})^3P_0}{2(2!)(\frac{1}{6})^2} \\ 
+    = \frac{5}{3} + 41.67 * P_0 \xrightarrow[]{P_0 = 0.09} L = \frac{5}{3} + 41.67 * 0.09 = 5.41$
+  \end{latin}
+
 \end{enumerate}
