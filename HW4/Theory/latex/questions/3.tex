@@ -1,31 +1,11 @@
 \smalltitle{سوال 3}
 \\
-برای هر سیستم جداگانه بررسی می‌کنیم. \\
+می‌دانیم که توزیع negative bionomial عملا جمع چندین متغیر تصادفی با توزیع هندسی است.\\
+مثلا فرض کنید $X \thicksim  NB(r,p)$ که یعنی X می‌گوید چه تعداد اقدام ناموفق تا قبل از دیدن r موفقیت داشته‌ایم که در هر دور احتمال موفقیت نیز p است.
 \begin{latin}
-  \noindent
-  $P_0 = ((\sum_{n=0}^{c-1}\frac{(\frac{\lambda}{\mu})^n}{n!})+((\frac{\lambda}{\mu})^c\frac{1}{c!}\frac{c\mu}{c\mu-\lambda}))^{-1}$ \\
-  \\
-  $L = c\rho + \frac{(c\rho)^{c+1}P_0}{c(c!)(1-\rho)^2}$
-  \\\\
-  $W = \frac{L}{\lambda}$
-  \\ \\
+  $X = Y_1 + Y_2 + \cdots + Y_r, Y \thicksim Geometric(p)$\\\\
+  $CDF(Y) = F(Y=y) = 1 - (1-p)^y = R \xrightarrow[]{\text{Inverse Transform}} y_i = \log_{1-p}(1-R_i)$ \\\\
+  $X = \sum_{i=1}^{r}y_i = \sum_{i=1}^{r}\log_{1-p}(1-R_i) = \sum_{i=1}^{r}\log_{1-p}(R'_i) =\log_{1-p}(\Pi_{i=1}^{r}R'_i) \leq 1 < \log_{1-p}(\Pi_{i=1}^{r+1}R'_i) \\\\
+   \rightarrow 1 - p < \Pi_{i=1}^{r+1}R'_i$
 \end{latin}
-\begin{enumerate}
-  \item سیسستم اول
-  \begin{latin}
-    $P_0 = 0.056 \rightarrow L = 4.98\rightarrow W = 0.41$ \\
-    annual cost = $0.41 \times 12 \times \times 0.001 \times 365 \times 24 \times 3600 = 157325\$$
-  \end{latin}
-  \item سیستم با بهبود سرور 
-  \begin{latin}
-    $P_0 = 0.111 \rightarrow L = 2.88\rightarrow W = 0.240$\\
-    annual cost = $0.240 \times 12 \times 0.001 \times 365 \times 24 \times 3600 + 50000= 141104\$$
-  \end{latin}
-  \item سیستم با اضافه کردن سرور جدید
-  \begin{latin}
-    $P_0 = 0.083 \rightarrow L = 2.83 \rightarrow W = 0.235$\\
-    annual cost = $0.235 \times 12 \times 0.001 \times 365 \times 24 \times 3600 + 70000=159264\$$
-  \end{latin}
-\end{enumerate}
-متوجه می‌شویم در بهترین حالت برای بهینه کردن هزینه‌ها باید سرورها را ارتقاع ببخشیم.
-\\
+می‌توان از روش دیگر استفاده کرد که با استفاده از توزیع نمایی یک عدد مثل Y تولید بکنیم و در مرحله بعدی این عدد را در توزیع negative bionomial قرار دهیم حال سپس در هر مرحله توزیع NB را بر geometric تقسیم کرده و اگر عدد تولید شده رندوم ما از این مقدار کوچکتر بود آنرا قبول می‌کنیم و در غیر این صورت دوباره مراحل را از اول با اعداد جدید انجام می‌دهیم.

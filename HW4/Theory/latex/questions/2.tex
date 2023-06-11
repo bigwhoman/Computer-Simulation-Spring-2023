@@ -1,20 +1,37 @@
 \smalltitle{سوال 2}
 \begin{enumerate}
   \item \phantom{text}
+        \\
+        برای این کار ابتدا تابع توزیع احتمال را بدست می‌آوریم.\\
         \begin{latin}
-          $\rho = \frac{\lambda}{c\mu } = \frac{10}{2\times6}=\frac{5}{6}$
+          $P[X] = \begin{cases}
+              \frac{50}{110} & X = apple     \\
+              \frac{30}{110} & X = banana   \\
+              \frac{20}{110} & X = orange    \\
+              \frac{10}{110} & X = pineapple \\
+            \end{cases}$
         \end{latin}
-  \item \phantom{text}
+        حال تابع توزیع تجمعی را بدست می‌آوریم.
+        \\
         \begin{latin}
-          $P_0 = ([1 + \frac{10}{6}] + [(\frac{10}{6})^2*\frac{1}{2}*\frac{2 * 6}{12 - 10}])^{-1} = 0.09$
-          \\\\
-          $P_{wait} = \frac{(c*\rho)^c*\rho}{c!*(1-\rho)}*P_0 = \frac{(2*\frac{5}{6})^2*\frac{5}{6}}{2*\frac{1}{6}}*0.09 = 0.625$
+          $
+            CDF = F(x) = \begin{cases}
+                \frac{50}{110} & X = apple \\
+                \frac{80}{110} & X = banana \\
+                \frac{100}{110} & X = orange \\
+                \frac{110}{110} & X = pineapple \\
+            \end{cases}
+          $
         \end{latin}
-  \item \phantom{text}
-  \\
-  \begin{latin}
-    $L = c\rho + \frac{(c\rho)^{c+1}P_0}{c(c!)(1-\rho)^2} \xrightarrow[]{\rho = \frac{\lambda}{c\mu}=\frac{5}{6}}=\frac{5}{3} + \frac{(\frac{5}{3})^3P_0}{2(2!)(\frac{1}{6})^2} \\ 
-    = \frac{5}{3} + 41.67 * P_0 \xrightarrow[]{P_0 = 0.09} L = \frac{5}{3} + 41.67 * 0.09 = 5.41$
-  \end{latin}
-
+      \item \phantom{text}
+      \\
+      حال بررسی می‌کنیم که هر کدام از اعداد در کدام بازه قرار می‌گیرند.\\
+      \begin{latin}
+        $\begin{cases}
+          0 < 0.3,0.45 < \frac{50}{110} = 0.454 \rightarrow apple \\
+          0.454 < 0.6 < \frac{80}{110} = 0.727 \rightarrow banana \\
+          0.727 < 0.8 < \frac{100}{110} = 0.909 \rightarrow orange \\
+          0.909 < 0.95 < \frac{110}{110} = 1.000 \rightarrow pineapple
+        \end{cases}$
+      \end{latin}
 \end{enumerate}
