@@ -3,9 +3,14 @@
 می‌دانیم که توزیع negative bionomial عملا جمع چندین متغیر تصادفی با توزیع هندسی است.\\
 مثلا فرض کنید $X \thicksim  NB(r,p)$ که یعنی X می‌گوید چه تعداد اقدام ناموفق تا قبل از دیدن r موفقیت داشته‌ایم که در هر دور احتمال موفقیت نیز p است.
 \begin{latin}
-  $X = Y_1 + Y_2 + \cdots + Y_r, Y \thicksim Geometric(p)$\\\\
-  $CDF(Y) = F(Y=y) = 1 - (1-p)^y = R \xrightarrow[]{\text{Inverse Transform}} y_i = \log_{1-p}(1-R_i)$ \\\\
-  $X = \sum_{i=1}^{r}y_i = \sum_{i=1}^{r}\log_{1-p}(1-R_i) = \sum_{i=1}^{r}\log_{1-p}(R'_i) =\log_{1-p}(\Pi_{i=1}^{r}R'_i) \leq 1 < \log_{1-p}(\Pi_{i=1}^{r+1}R'_i) \\\\
-   \rightarrow 1 - p < \Pi_{i=1}^{r+1}R'_i$
+  $X = Y_1 + Y_2 + \cdots + Y_r, Y \thicksim Geometric(p)$\\
+  % $CDF(Y) = F(Y=y) = 1 - (1-p)^y = R \xrightarrow[]{\text{Inverse Transform}} y_i = \log_{1-p}(1-R_i)$ \\\\
+%   $X = \sum_{i=1}^{r}y_i = \sum_{i=1}^{r}\log_{1-p}(1-R_i) = \sum_{i=1}^{r}\log_{1-p}(R'_i) =\log_{1-p}(\Pi_{i=1}^{r}R'_i) \leq 1 < \log_{1-p}(\Pi_{i=1}^{r+1}R'_i) \\\\
+%    \rightarrow 1 - p < \Pi_{i=1}^{r+1}R'_i$\\
 \end{latin}
-می‌توان از روش دیگر استفاده کرد که با استفاده از توزیع نمایی یک عدد مثل Y تولید بکنیم و در مرحله بعدی این عدد را در توزیع negative bionomial قرار دهیم حال سپس در هر مرحله توزیع NB را بر geometric تقسیم کرده و اگر عدد تولید شده رندوم ما از این مقدار کوچکتر بود آنرا قبول می‌کنیم و در غیر این صورت دوباره مراحل را از اول با اعداد جدید انجام می‌دهیم.
+حال این روش مانند این است که بازه ۰ تا p ر ا به عنوان برد در نظر بگیریم و شروع به جنریت کردن اعداد رندوم بکنیم و نهایتا زمانی متوقف شویم که k بار موفقیت ببینیم و همچنین تعداد باخت‌ها را به عنوان جواب خروجی بدهیم.\\
+\begin{latin}
+  \noindent
+  $0.81 > 0.6 \rightarrow fail, 0.65 > 0.6 \rightarrow fail, 0.72 > 0.6 \rightarrow fail,\\ 0.95 > 0.6 \rightarrow fail, 0.2 < 0.6 \rightarrow win, 0.86 > 0.6 \rightarrow fail, 0.4 < 0.6 \rightarrow win,\\ 0.75 > 0.6 \rightarrow fail, 0.35 < 0.6 \rightarrow win, 0.79 > 0.6 \rightarrow fail, 0.2 < 0.6 \rightarrow win$
+\end{latin}
+حال مشاهده می‌کنیم که در آخرین مرحله ۳ عدد برد را مشاهده کردیم پس تعداد کل قدم‌هایی که رفته‌ایم برابر ۹ تا خواهد بود و پس از این دوباره باید از اول تمامی مراحل را انجام دهیم پس عدد 6 را به عنوان عدد رندوم تصادفی تولیدشده خروجی می‌دهیم.
